@@ -7,6 +7,6 @@ It will create a menu entry inyour FluxBox desktop menu to update WT7 which you 
 
 _Screenshot: Menu entry added to the Desktop_
 
-<img src="https://weaknetlabs.com/images/wt7-updater-1.PNG"/>
+<img src="https://weaknetlabs.com/images/wt7-updater-2.PNG"/>
 ## Installation
 Run the script after downloading it as shown in the screenshot above.
