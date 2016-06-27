@@ -63,6 +63,6 @@ fi
 if [ "$update" == "1" ];then
 	bracket 0; echo "Downloading update script now."
 	wget -q https://weaknetlabs.com/linux/update-wt/$uBase.$uRc.txt -O updater.sh && chmod +x updater.sh && ./updater.sh
+	echo "$uBase#$uRc" > /etc/wt-version # make sure we doc the update!
 fi
-echo "$uBase#$uRc" > /etc/wt-version # make sure we doc the update!
 printf "\nGoodbye.$RESET\n"
