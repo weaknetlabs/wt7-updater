@@ -65,4 +65,8 @@ if [ "$update" == "1" ];then
 	wget -q https://weaknetlabs.com/linux/update-wt/$uBase.$uRc.txt -O updater.sh && chmod +x updater.sh && ./updater.sh
 	echo "$uBase#$uRc" > /etc/wt-version # make sure we doc the update!
 fi
-printf "\nGoodbye.$RESET\n"
+bracket 0; printf "Updating the desktop menu.";
+sed -i "s/BETA 2/$uBase.$uRc/" /root/.fluxbox/menu # update the menu too!
+bracket 0; printf "Installing myself into /usr/local/sbin/";
+cp /tmp/wt7-updater/update-wt7.sh /usr/local/sbin/
+bracket 0; printf "All done! :-) $RESET\n"
