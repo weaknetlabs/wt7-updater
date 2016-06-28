@@ -8,7 +8,7 @@ RED='\e[91m'
 function bracket { # 0 = yellow *, 1 = green ?, 2 = red !
 	if [ "$1" -eq "0" ]
 	then
-		printf "$WHITE[ $YELLOW*$WHITE ] $RESET";
+		printf "$WHITE[$YELLOW >$WHITE ] $RESET";
 	elif [ "$1" -eq "1" ]
 	then
 		printf "$WHITE[ $GREEN?$WHITE ] $RESET";
@@ -17,7 +17,7 @@ function bracket { # 0 = yellow *, 1 = green ?, 2 = red !
 		printf "$WHITE[ $RED!$WHITE ] $RESET";
 	fi
 }
-printf "$YELLOW\n * WEAKERTHAN LINUX Updater Tool $WHITE($GREEN";
+printf "$YELLOW\n \xe2\x9c\xaa  WEAKERTHAN LINUX Updater Tool $WHITE($GREEN";
 printf "BETA$WHITE)$RESET\n\n";
 bracket 0; echo "Checking update version of WT."
 latest=$(curl https://weaknetlabs.com/linux/update-wt/update.php -s); # update version
