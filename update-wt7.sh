@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# WEAKERTHAN LINUX Updater Tool
+# 2016 WeakNet Labs
+# Douglas Berdeaux - WeakNetLabs@Gmail.com
+#
 # COLOR:
 YELLOW='\e[33m';
 GREEN='\e[32m'
@@ -67,6 +72,6 @@ if [ "$update" == "1" ];then
 fi
 bracket 0; printf "Updating the desktop menu.\n";
 sed -i "s/BETA 2/$uBase.$uRc/" /root/.fluxbox/menu # update the menu too!
-bracket 0; printf "Installing myself into /usr/local/sbin/";
+bracket 0; printf "Installing myself into /usr/local/sbin/\n";
 cp /tmp/wt7-updater/update-wt7.sh /usr/local/sbin/
 bracket 0; printf "All done! :-) $RESET\n"
