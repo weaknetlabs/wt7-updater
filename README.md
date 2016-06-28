@@ -9,6 +9,6 @@ This tool will also create a menu entry in your FluxBox desktop menu to update W
 
 _Screenshot: Menu entry added to the Desktop_
 
-<img src="https://weaknetlabs.com/images/wt7-updater-05.PNG"/>
+<img src="https://weaknetlabs.com/images/update-success.png"/>
 ## Installation
 Simply run the script after downloading it as shown in the screenshot above. From then, you can simply choose it from the desktop menu under ```OS Utilities->Update WT (experimental!)```
