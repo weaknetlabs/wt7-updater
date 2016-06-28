@@ -72,6 +72,12 @@ if [ "$update" == "1" ];then
 fi
 bracket 0; printf "Updating the desktop menu.\n";
 sed -i "s/BETA 2/$uBase.$uRc/" /root/.fluxbox/menu # update the menu too!
-bracket 0; printf "Installing myself into /usr/local/sbin/\n";
+if [ -f "/usr/local/sbin/update-wt7.sh" ];
+then # already installed, say update
+	bracket 0; printf "Updating ";
+else
+	bracket 0; printf "Installing ";
+fi
+printf "myself into /usr/local/sbin/\n";
 cp /tmp/wt7-updater/update-wt7.sh /usr/local/sbin/
-bracket 0; printf "All done! :-) $RESET\n"
+bracket 0; printf "Completed. $RESET\n\n"
