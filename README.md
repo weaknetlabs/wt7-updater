@@ -10,5 +10,10 @@ This tool will also create a menu entry in your FluxBox desktop menu to update W
 _Screenshot: Menu entry added to the Desktop_
 
 <img src="https://weaknetlabs.com/images/update-success.png"/>
+
+_Screenshot: Grub2 Splash Screen updated in the 7.5 update to WT7 BETA_
+
+<img src="https://weaknetlabs.com/images/grub-splash-update.png" />
+
 ## Installation
 Simply run the script after downloading it as shown in the screenshot above. From then, you can simply choose it from the desktop menu under ```OS Utilities->Update WT (experimental!)```
