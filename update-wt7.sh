@@ -44,9 +44,9 @@ then
 		exit 1;
 	else
 		# Base is equivalent, check RC
-		if (("$lRc" < "uRc"))
+		if (("$lRc" < "$uRc"))
 		then
-			bracket 1; printf "You can update your local version of WT from$YELLOW $lBase.$lRc$RESET to$YELLOW $lBase.$uRc$RESET. Proceed? [y/N]$GREEN "
+			bracket 1; printf "There is a new update to Weakerthan LINUX, Proceed? [y/N]$GREEN "
 			read updateAnswer;
 			printf "$RESET";
 			if [ "$updateAnswer" == "y" ];
@@ -62,11 +62,14 @@ else
 	# no update file found, create it.
 	bracket 2; echo "No version file found.";
 	bracket 0; echo "Creating version file /etc/wt-version";
-	echo "7#1" >  /etc/wt-version
-	bracket 2; echo "Done. Please re-run update tool.";
+	echo "7#4" >  /etc/wt-version
+	# bracket 2; echo "Done. Please re-run update tool.";
+	./update-wt7.sh # re-run myself
 fi
 if [ "$update" == "1" ];then
 	bracket 0; echo "Downloading update script now."
+	uRc=$lRc; uRc=$((uRc+1))
+	# echo "URC: $uRc"; exit 1; # DEBUG
 	wget -q https://weaknetlabs.com/linux/update-wt/$uBase.$uRc.txt -O updater.sh && chmod +x updater.sh && ./updater.sh
 	echo "$uBase#$uRc" > /etc/wt-version # make sure we doc the update!
 fi
