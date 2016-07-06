@@ -82,5 +82,5 @@ else
 	bracket 0; printf "Installing ";
 fi
 printf "myself into /usr/local/sbin/\n";
-cp /tmp/wt7-updater/update-wt7.sh /usr/local/sbin/
+cp update-wt7.sh /usr/local/sbin/
 bracket 0; printf "Completed. $RESET\n\n"
